@@ -1,2 +1,27 @@
 # windows-event-log-analysis
 Windows Event Viewer log analysis and troubleshooting project
+Windows Event Log Analysis Project
+
+Objective: Investigate Windows system logs to identify errors and potential system issues.
+
+Tools Used
+- Windows Event Viewer
+- Command Prompt (admin)
+Investigate system error logs using Windows Event Viewer.
+
+Issue Identified
+- Event ID 36 – Volsnap error indicating shadow copy storage limitations.
+
+Analysis
+- Located an error in Windows Event Viewer under System logs.
+- Event indicated that shadow copies were deleted due to insufficient storage.
+
+Troubleshooting Steps
+- Checked shadow storage using vssadmin list shadowstorage
+- Reviewed allocated disk space for snapshots
+- Recommended increasing storage allocation or deleting old shadow copies.
+
+  
+
+Conclusion
+The error was caused by insufficient shadow copy storage capacity, which affected system restore functionality.
